@@ -9,8 +9,8 @@ fastapi run main.py
     print(res)
 
     dbname = 'prueba'
-    user = 'krlitosdev93@gmail.com'
-    pwd = 'krlitos'
+    user = 'user@gmail.com'
+    pwd = 'password'
     uid = common.authenticate(dbname, user, pwd, {})
     print('-> Get UID')
     print(uid)
