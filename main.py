@@ -10,6 +10,13 @@ from synclineal.routes import synclineal_router
 from odoo_client import odoo_bridge
 from odbc_client import sqlserver_bridge
 
+# Para el sistema de plantillas
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from starlette.requests import Request
+
+
 version = "v1"
 description = """
 A REST API for a Empresa review web service.
@@ -68,6 +75,17 @@ app.add_middleware(
 )
 
 app.include_router(synclineal_router, prefix=f"{version_prefix}/synclineal", tags=["synclineal"])
+
+# Ruta para el sistema de archivos estaticos
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Configurar Jinja2 para renderizar plantillas
+templates = Jinja2Templates(directory="templates")
+
+# Ruta base para la plantilla
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/info")
 async def info():

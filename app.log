@@ -1,121 +1,73 @@
-2025-01-05 14:27:41,938 - INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
-2025-01-05 14:27:41,938 - INFO - [raw sql] ()
-2025-01-05 14:27:41,940 - INFO - SELECT schema_name()
-2025-01-05 14:27:41,941 - INFO - [generated in 0.00047s] ()
-2025-01-05 14:27:41,947 - INFO - SELECT CAST('test max support' AS NVARCHAR(max))
-2025-01-05 14:27:41,948 - INFO - [generated in 0.00064s] ()
-2025-01-05 14:27:41,951 - INFO - SELECT 1 FROM fn_listextendedproperty(default, default, default, default, default, default, default)
-2025-01-05 14:27:41,951 - INFO - [generated in 0.00072s] ()
-2025-01-05 14:27:41,957 - ERROR - Error al conectar a la base de datos [Prueba] , Host: [localhost], Port: [1433], Usuario: [sa], Password: [*****]. Error : [Not an executable object: '\n            SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH\n            FROM INFORMATION_SCHEMA.COLUMNS\n            ORDER BY TABLE_NAME, ORDINAL_POSITION\n            ']
-2025-01-05 14:27:42,052 - INFO - Started server process [3452]
-2025-01-05 14:27:42,053 - INFO - Waiting for application startup.
-2025-01-05 14:27:42,054 - INFO - Iniciando el Servicio
-2025-01-05 14:27:42,054 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
-2025-01-05 14:27:42,054 - INFO - Comprobando conexion a Odoo
-2025-01-05 14:27:42,055 - INFO - Autenticacion exitosa con el Sistema Odoo. ID de usuario: 2
-2025-01-05 14:27:42,055 - INFO - Comprobando conexion a SQL_Server
-2025-01-05 14:27:42,055 - INFO - Application startup complete.
-2025-01-05 14:27:42,056 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2025-01-05 14:32:06,078 - INFO - Shutting down
-2025-01-05 14:32:06,193 - INFO - Waiting for application shutdown.
-2025-01-05 14:32:06,195 - INFO - Finalizando el Servicio
-2025-01-05 14:32:06,195 - INFO - Application shutdown complete.
-2025-01-05 14:32:06,195 - INFO - Finished server process [3452]
-2025-01-05 14:32:09,198 - INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
-2025-01-05 14:32:09,199 - INFO - [raw sql] ()
-2025-01-05 14:32:09,201 - INFO - SELECT schema_name()
-2025-01-05 14:32:09,202 - INFO - [generated in 0.00045s] ()
-2025-01-05 14:32:09,206 - INFO - SELECT CAST('test max support' AS NVARCHAR(max))
-2025-01-05 14:32:09,207 - INFO - [generated in 0.00050s] ()
-2025-01-05 14:32:09,211 - INFO - SELECT 1 FROM fn_listextendedproperty(default, default, default, default, default, default, default)
-2025-01-05 14:32:09,211 - INFO - [generated in 0.00082s] ()
-2025-01-05 14:32:09,217 - ERROR - Error al conectar a la base de datos [Prueba] , Host: [localhost], Port: [1433], Usuario: [sa], Password: [*****]. Error : [Not an executable object: 'select * from dbo.cliente;']
-2025-01-05 14:32:09,293 - INFO - Started server process [16008]
-2025-01-05 14:32:09,293 - INFO - Waiting for application startup.
-2025-01-05 14:32:09,293 - INFO - Iniciando el Servicio
-2025-01-05 14:32:09,293 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
-2025-01-05 14:32:09,293 - INFO - Comprobando conexion a Odoo
-2025-01-05 14:32:09,293 - INFO - Autenticacion exitosa con el Sistema Odoo. ID de usuario: 2
-2025-01-05 14:32:09,293 - INFO - Comprobando conexion a SQL_Server
-2025-01-05 14:32:09,293 - INFO - Application startup complete.
-2025-01-05 14:32:09,293 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2025-01-05 14:32:58,800 - INFO - Shutting down
-2025-01-05 14:32:58,917 - INFO - Waiting for application shutdown.
-2025-01-05 14:32:58,917 - INFO - Finalizando el Servicio
-2025-01-05 14:32:58,917 - INFO - Application shutdown complete.
-2025-01-05 14:32:58,917 - INFO - Finished server process [16008]
-2025-01-05 14:33:01,807 - INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
-2025-01-05 14:33:01,808 - INFO - [raw sql] ()
-2025-01-05 14:33:01,811 - INFO - SELECT schema_name()
-2025-01-05 14:33:01,811 - INFO - [generated in 0.00044s] ()
-2025-01-05 14:33:01,815 - INFO - SELECT CAST('test max support' AS NVARCHAR(max))
-2025-01-05 14:33:01,815 - INFO - [generated in 0.00055s] ()
-2025-01-05 14:33:01,819 - INFO - SELECT 1 FROM fn_listextendedproperty(default, default, default, default, default, default, default)
-2025-01-05 14:33:01,819 - INFO - [generated in 0.00061s] ()
-2025-01-05 14:33:01,824 - ERROR - Error al conectar a la base de datos [Prueba] , Host: [localhost], Port: [1433], Usuario: [sa], Password: [*****]. Error : [Not an executable object: 'select * from dbo.cliente']
-2025-01-05 14:33:01,914 - INFO - Started server process [11852]
-2025-01-05 14:33:01,915 - INFO - Waiting for application startup.
-2025-01-05 14:33:01,916 - INFO - Iniciando el Servicio
-2025-01-05 14:33:01,917 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
-2025-01-05 14:33:01,917 - INFO - Comprobando conexion a Odoo
-2025-01-05 14:33:01,917 - INFO - Autenticacion exitosa con el Sistema Odoo. ID de usuario: 2
-2025-01-05 14:33:01,917 - INFO - Comprobando conexion a SQL_Server
-2025-01-05 14:33:01,917 - INFO - Application startup complete.
-2025-01-05 14:33:01,917 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2025-01-05 14:35:50,388 - INFO - Shutting down
-2025-01-05 14:35:50,503 - INFO - Waiting for application shutdown.
-2025-01-05 14:35:50,506 - INFO - Finalizando el Servicio
-2025-01-05 14:35:50,506 - INFO - Application shutdown complete.
-2025-01-05 14:35:50,506 - INFO - Finished server process [11852]
-2025-01-05 14:35:53,321 - INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
-2025-01-05 14:35:53,322 - INFO - [raw sql] ()
-2025-01-05 14:35:53,324 - INFO - SELECT schema_name()
-2025-01-05 14:35:53,325 - INFO - [generated in 0.00052s] ()
-2025-01-05 14:35:53,332 - INFO - SELECT CAST('test max support' AS NVARCHAR(max))
-2025-01-05 14:35:53,333 - INFO - [generated in 0.00062s] ()
-2025-01-05 14:35:53,336 - INFO - SELECT 1 FROM fn_listextendedproperty(default, default, default, default, default, default, default)
-2025-01-05 14:35:53,337 - INFO - [generated in 0.00074s] ()
-2025-01-05 14:35:53,342 - INFO - BEGIN (implicit)
-2025-01-05 14:35:53,342 - INFO - SELECT * FROM dbo.cliente
-2025-01-05 14:35:53,342 - INFO - [generated in 0.00102s] ()
-2025-01-05 14:35:53,346 - INFO - ROLLBACK
-2025-01-05 14:35:53,422 - INFO - Started server process [17580]
-2025-01-05 14:35:53,423 - INFO - Waiting for application startup.
-2025-01-05 14:35:53,425 - INFO - Iniciando el Servicio
-2025-01-05 14:35:53,425 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
-2025-01-05 14:35:53,425 - INFO - Comprobando conexion a Odoo
-2025-01-05 14:35:53,425 - INFO - Autenticacion exitosa con el Sistema Odoo. ID de usuario: 2
-2025-01-05 14:35:53,425 - INFO - Comprobando conexion a SQL_Server
-2025-01-05 14:35:53,425 - INFO - Application startup complete.
-2025-01-05 14:35:53,427 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2025-01-05 14:36:23,701 - INFO - Shutting down
-2025-01-05 14:36:23,814 - INFO - Waiting for application shutdown.
-2025-01-05 14:36:23,816 - INFO - Finalizando el Servicio
-2025-01-05 14:36:23,816 - INFO - Application shutdown complete.
-2025-01-05 14:36:23,816 - INFO - Finished server process [17580]
-2025-01-05 14:38:20,085 - INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
-2025-01-05 14:38:20,085 - INFO - [raw sql] ()
-2025-01-05 14:38:20,089 - INFO - SELECT schema_name()
-2025-01-05 14:38:20,090 - INFO - [generated in 0.00152s] ()
-2025-01-05 14:38:20,109 - INFO - SELECT CAST('test max support' AS NVARCHAR(max))
-2025-01-05 14:38:20,109 - INFO - [generated in 0.00064s] ()
-2025-01-05 14:38:20,112 - INFO - SELECT 1 FROM fn_listextendedproperty(default, default, default, default, default, default, default)
-2025-01-05 14:38:20,113 - INFO - [generated in 0.00080s] ()
-2025-01-05 14:38:20,123 - INFO - BEGIN (implicit)
-2025-01-05 14:38:20,123 - INFO - SELECT * FROM dbo.cliente
-2025-01-05 14:38:20,124 - INFO - [generated in 0.00118s] ()
-2025-01-05 14:38:20,126 - INFO - ROLLBACK
-2025-01-05 14:38:20,234 - INFO - Started server process [8972]
-2025-01-05 14:38:20,235 - INFO - Waiting for application startup.
-2025-01-05 14:38:20,236 - INFO - Iniciando el Servicio
-2025-01-05 14:38:20,236 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
-2025-01-05 14:38:20,237 - INFO - Comprobando conexion a Odoo
-2025-01-05 14:38:20,237 - INFO - Autenticacion exitosa con el Sistema Odoo. ID de usuario: 2
-2025-01-05 14:38:20,237 - INFO - Comprobando conexion a SQL_Server
-2025-01-05 14:38:20,237 - INFO - Application startup complete.
-2025-01-05 14:38:20,238 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-2025-01-05 14:39:03,653 - INFO - Shutting down
-2025-01-05 14:39:03,764 - INFO - Waiting for application shutdown.
-2025-01-05 14:39:03,765 - INFO - Finalizando el Servicio
-2025-01-05 14:39:03,765 - INFO - Application shutdown complete.
-2025-01-05 14:39:03,765 - INFO - Finished server process [8972]
+2025-01-05 14:49:07,127 - INFO - SELECT CAST(SERVERPROPERTY('ProductVersion') AS VARCHAR)
+2025-01-05 14:49:07,130 - INFO - [raw sql] ()
+2025-01-05 14:49:07,145 - INFO - SELECT schema_name()
+2025-01-05 14:49:07,145 - INFO - [generated in 0.00070s] ()
+2025-01-05 14:49:07,154 - INFO - SELECT CAST('test max support' AS NVARCHAR(max))
+2025-01-05 14:49:07,155 - INFO - [generated in 0.00054s] ()
+2025-01-05 14:49:07,165 - INFO - SELECT 1 FROM fn_listextendedproperty(default, default, default, default, default, default, default)
+2025-01-05 14:49:07,166 - INFO - [generated in 0.00066s] ()
+2025-01-05 14:49:07,430 - INFO - Started server process [1604]
+2025-01-05 14:49:07,430 - INFO - Waiting for application startup.
+2025-01-05 14:49:07,430 - INFO - Iniciando el Servicio
+2025-01-05 14:49:07,430 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
+2025-01-05 14:49:07,430 - INFO - Comprobando conexion a Odoo
+2025-01-05 14:49:07,430 - INFO - Autenticacion exitosa con el Sistema Odoo. ID de usuario: 2
+2025-01-05 14:49:07,430 - INFO - Comprobando conexion a SQL_Server
+2025-01-05 14:49:07,430 - INFO - Application startup complete.
+2025-01-05 14:49:07,446 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-01-05 14:50:46,943 - INFO - Shutting down
+2025-01-05 14:50:47,058 - INFO - Waiting for application shutdown.
+2025-01-05 14:50:47,059 - INFO - Finalizando el Servicio
+2025-01-05 14:50:47,059 - INFO - Application shutdown complete.
+2025-01-05 14:50:47,059 - INFO - Finished server process [1604]
+2025-01-12 06:01:31,107 - ERROR - Error al conectar a la base de datos [Prueba] , Host: [localhost], Port: [1433], Usuario: [sa], Password: [*****]. Error : [(pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+2025-01-12 06:01:31,292 - INFO - Started server process [15720]
+2025-01-12 06:01:31,292 - INFO - Waiting for application startup.
+2025-01-12 06:01:31,292 - INFO - Iniciando el Servicio
+2025-01-12 06:01:31,292 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
+2025-01-12 06:01:31,292 - INFO - Comprobando conexion a Odoo
+2025-01-12 06:01:31,292 - ERROR - Error de conexion con el sistema Odoo: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+2025-01-12 06:01:31,292 - ERROR - Host_Odoo: [http://localhost:8069] - User_Odoo: [krlitosdev93@gmail.com] - Password_Odoo: [krlitos] - DB_Odoo: [prueba] 
+2025-01-12 06:01:31,292 - INFO - Comprobando conexion a SQL_Server
+2025-01-12 06:01:31,292 - INFO - Application startup complete.
+2025-01-12 06:01:31,292 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-01-12 06:02:21,731 - INFO - Shutting down
+2025-01-12 06:02:21,841 - INFO - Waiting for application shutdown.
+2025-01-12 06:02:21,841 - INFO - Finalizando el Servicio
+2025-01-12 06:02:21,841 - INFO - Application shutdown complete.
+2025-01-12 06:02:21,841 - INFO - Finished server process [15720]
+2025-01-12 06:08:54,020 - ERROR - Error al conectar a la base de datos [Prueba] , Host: [localhost], Port: [1433], Usuario: [sa], Password: [*****]. Error : [(pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+2025-01-12 06:08:54,220 - INFO - Started server process [16560]
+2025-01-12 06:08:54,220 - INFO - Waiting for application startup.
+2025-01-12 06:08:54,220 - INFO - Iniciando el Servicio
+2025-01-12 06:08:54,220 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
+2025-01-12 06:08:54,220 - INFO - Comprobando conexion a Odoo
+2025-01-12 06:08:54,220 - ERROR - Error de conexion con el sistema Odoo: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+2025-01-12 06:08:54,220 - ERROR - Host_Odoo: [http://localhost:8069] - User_Odoo: [krlitosdev93@gmail.com] - Password_Odoo: [krlitos] - DB_Odoo: [prueba] 
+2025-01-12 06:08:54,220 - INFO - Comprobando conexion a SQL_Server
+2025-01-12 06:08:54,220 - INFO - Application startup complete.
+2025-01-12 06:08:54,220 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-01-12 06:13:42,184 - INFO - Shutting down
+2025-01-12 06:13:42,288 - INFO - Waiting for application shutdown.
+2025-01-12 06:13:42,289 - INFO - Finalizando el Servicio
+2025-01-12 06:13:42,289 - INFO - Application shutdown complete.
+2025-01-12 06:13:42,289 - INFO - Finished server process [16560]
+2025-01-12 06:14:15,515 - ERROR - Error al conectar a la base de datos [Prueba] , Host: [localhost], Port: [1433], Usuario: [sa], Password: [*****]. Error : [(pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+2025-01-12 06:14:15,671 - INFO - Started server process [6824]
+2025-01-12 06:14:15,673 - INFO - Waiting for application startup.
+2025-01-12 06:14:15,674 - INFO - Iniciando el Servicio
+2025-01-12 06:14:15,674 - INFO - Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]
+2025-01-12 06:14:15,674 - INFO - Comprobando conexion a Odoo
+2025-01-12 06:14:15,674 - ERROR - Error de conexion con el sistema Odoo: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+2025-01-12 06:14:15,674 - ERROR - Host_Odoo: [http://localhost:8069] - User_Odoo: [krlitosdev93@gmail.com] - Password_Odoo: [krlitos] - DB_Odoo: [prueba] 
+2025-01-12 06:14:15,674 - INFO - Comprobando conexion a SQL_Server
+2025-01-12 06:14:15,675 - INFO - Application startup complete.
+2025-01-12 06:14:15,676 - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-01-12 06:50:42,096 - INFO - Shutting down
+2025-01-12 06:50:42,208 - INFO - Waiting for application shutdown.
+2025-01-12 06:50:42,208 - INFO - Finalizando el Servicio
+2025-01-12 06:50:42,208 - INFO - Application shutdown complete.
+2025-01-12 06:50:42,208 - INFO - Finished server process [6824]
