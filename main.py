@@ -16,6 +16,27 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.requests import Request
 
+# Para la base de datos de Postgrest
+from localdb_client import bridge_local_db
+from logger_config import SlugMiddleware, logger
+from typing import List
+from fastapi import Depends, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+
+# Configuración de autenticación básica
+security = HTTPBasic()
+
+# Función de validación de credenciales
+def validate_credentials(credentials: HTTPBasicCredentials = Depends(security)):
+    correct_username = "admin"  # Nombre de usuario correcto
+    correct_password = "secret"  # Contraseña correcta
+
+    if credentials.username != correct_username or credentials.password != correct_password:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid credentials",
+            headers={"WWW-Authenticate": "Basic"},
+        )
 
 version = "v1"
 description = """
@@ -32,13 +53,12 @@ version_prefix =f"/api/{version}"
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Iniciando el Servicio")
+    if bridge_local_db.check_connection() is False:logger.info("No se pudo establecer la conexion con la base de datos local Postgres")
+    if bridge_local_db.check_connection() is True:logger.info("Se ha establecido la conexion con la base de datos local Postgres")
+    
     if settings.debug is True:
         logger.info("Modo Desarrollador activado [Para desabilitar el modo desarrollador cambie la variable 'DEBUG' en el archivo .env]")
-    logger.info("Comprobando conexion a Odoo")    
     odoo_bridge.Check_Connection()
-    logger.info("Comprobando conexion a SQL_Server")
-    #logger.info("Comprobando conexion a Local DataBase")
     yield  # Este `yield` es necesario para que el ciclo de vida funcione correctamente
     logger.info("Finalizando el Servicio")
     
@@ -74,6 +94,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Agregar el middleware de SlugMiddleware
+app.add_middleware(SlugMiddleware)
+
 app.include_router(synclineal_router, prefix=f"{version_prefix}/synclineal", tags=["synclineal"])
 
 # Ruta para el sistema de archivos estaticos
@@ -93,3 +116,9 @@ async def info():
         "app_name": settings.app_name,
         "admin_email": settings.admin_email,
     }
+
+@app.get("/logs_with_alerts", response_model=List[dict])
+async def get_logs_with_alerts(credentials: HTTPBasicCredentials = Depends(validate_credentials)):
+    # Obtener todos los logs con alertas desde la base de datos
+    logs_with_alerts = bridge_local_db.get_all_request_logs_with_alerts()
+    return logs_with_alerts

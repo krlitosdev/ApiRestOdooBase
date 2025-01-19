@@ -23,6 +23,13 @@ class Settings(BaseSettings):
     prod_user_sqlserver: str
     prod_password_sqlserver: str
     
+    local_host_postgres: str
+    local_port_postgres: int
+    local_db_postgres: str
+    local_user_postgres: str
+    local_password_postgres: str
+    batch_size:int
+    
     model_config = SettingsConfigDict(env_file=".env")
 
 # Importamos las configuraciones de Bases de datos y accesos extras

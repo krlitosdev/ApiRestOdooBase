@@ -69,3 +69,4 @@ class ClienteResPartner():
     def cargar_datos(self, datos):
         for key, value in datos.items():
             setattr(self, key, value)
+            

@@ -5,6 +5,7 @@ from model import ClienteResPartner
 class Base:
     def __init__(self):
         # Inicializar variables en la clase base
+        self.slug=None
         self.id_person = None
         self.tipo_persona_ids = None
 
@@ -12,6 +13,7 @@ class Base:
         # Método para inicializar los datos
         self.id_person = id_person
         self.tipo_persona_ids = tipo_persona_ids
+        
     
     def get_person_res_partner_async_data(self):
         pass
