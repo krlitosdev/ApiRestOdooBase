@@ -25,3 +25,5 @@ fastapi run main.py
     - Crear una instancia de HTTPBasic "security = HTTPBasic()" en el archivo main.py
     - Crear una función de validación para la autenticación "validate_credentials" en el archivo main.py
     - Usar la validación en el endpoint específico "get_logs_with_alerts(credentials: HTTPBasicCredentials = Depends(validate_credentials)):" en el archivo "main.py"
+    - Añadir login al "main.py"
+

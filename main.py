@@ -22,15 +22,15 @@ from logger_config import SlugMiddleware, logger
 from typing import List
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from fastapi.responses import JSONResponse
 
 # Configuración de autenticación básica
 security = HTTPBasic()
+correct_username = "admin"
+correct_password = "secret"
 
-# Función de validación de credenciales
+# Validación de credenciales
 def validate_credentials(credentials: HTTPBasicCredentials = Depends(security)):
-    correct_username = "admin"  # Nombre de usuario correcto
-    correct_password = "secret"  # Contraseña correcta
-
     if credentials.username != correct_username or credentials.password != correct_password:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -122,3 +122,14 @@ async def get_logs_with_alerts(credentials: HTTPBasicCredentials = Depends(valid
     # Obtener todos los logs con alertas desde la base de datos
     logs_with_alerts = bridge_local_db.get_all_request_logs_with_alerts()
     return logs_with_alerts
+
+# Endpoint para login
+@app.post("/login")
+async def login(credentials: HTTPBasicCredentials = Depends(security)):
+    if credentials.username == correct_username and credentials.password == correct_password:
+        return JSONResponse(content={"message": "Login successful"}, status_code=status.HTTP_200_OK)
+    raise HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Invalid credentials",
+        headers={"WWW-Authenticate": "Basic"},
+    )
